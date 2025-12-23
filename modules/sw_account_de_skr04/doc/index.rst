@@ -1,6 +1,6 @@
-#######################
-Account De Skr04 Module
-#######################
+##########################
+Sw Account De Skr04 Module
+##########################
 
 .. to remove, see https://www.tryton.org/develop/guidelines/documentation#index.rst
 

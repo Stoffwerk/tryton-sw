@@ -48,20 +48,20 @@ tests_require = []
 
 setup(name=name,
     version=version,
-    description='German SKR04 Chart of Account',
+    description='German Accounting based on SKR04',
     long_description=read('README.rst'),
-    author='Phil Markus',
-    author_email='info@dasstoffwerk.de',
-    url='https://www.dasstoffwerk.de/',
+    author='Phil Markus, Stoffwerk',
+    author_email='pm@dasstoffwerk.de',
+    url='https://www.dasstoffwerk.de',
     keywords='',
-    package_dir={'trytond.modules.account_de_skr04': '.'},
+    package_dir={'trytond.modules.sw_account_de_skr04': '.'},
     packages=(
-        ['trytond.modules.account_de_skr04']
-        + ['trytond.modules.account_de_skr04.%s' % p
+        ['trytond.modules.sw_account_de_skr04']
+        + ['trytond.modules.sw_account_de_skr04.%s' % p
             for p in find_packages()]
         ),
     package_data={
-        'trytond.modules.account_de_skr04': (info.get('xml', [])
+        'trytond.modules.sw_account_de_skr04': (info.get('xml', [])
             + ['tryton.cfg', 'view/*.xml', 'locale/*.po', '*.fodt',
                 'icons/*.svg', 'tests/*.rst', 'tests/*.json']),
         },
@@ -114,6 +114,6 @@ setup(name=name,
     zip_safe=False,
     entry_points="""
     [trytond.modules]
-    account_de_skr04 = trytond.modules.account_de_skr04
+    sw_account_de_skr04 = trytond.modules.sw_account_de_skr04
     """,  # noqa: E501
     )
