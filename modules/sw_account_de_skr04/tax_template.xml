@@ -8,7 +8,7 @@
         <!-- Steuerfrei: Ausfuhrlieferung in Drittländer außerhalb der EU -->
         <record id="tax_innner_au_delivery" model="account.tax.template">
             <field name="name">Steuerfreie Lieferung von Waren (§4 Nr. 1a UStG)</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Steuerfreie Lieferung von Waren </field>
             <field name="legal_notice">Steuerfreie Ausfuhrlieferung (§4 Nr. 1a UStG)</field>
             <field name="type">percentage</field>
@@ -20,7 +20,7 @@
         <!-- Parent-Template: voller Satz -->
         <record id="tax_de_ust_delivery_full_goods" model="account.tax.template">
             <field name="name">Umsatzsteuer voller Satz Waren Inland</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Umsatzsteuer voller Satz für Waren Inland</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_ust_goods"/>
@@ -28,7 +28,7 @@
         <!-- Child-Template: 19 % – wie vom Kunden ausgewiesen -->
         <record id="tax_de_ust_delivery_19_goods" model="account.tax.template">
             <field name="name">MwSt. 19% Waren</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">MwSt. 19% Waren</field>
             <field name="type">percentage</field>
             <field eval="Decimal('0.19')" name="rate"/>
@@ -39,7 +39,7 @@
         <!-- Parent-Template: voller Satz -->
         <record id="tax_de_ust_delivery_erm_goods" model="account.tax.template">
             <field name="name">Umsatzsteuer ermäßigter Satz Waren Inland</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Umsatzsteuer voller Satz für Waren Inland</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_ust_goods"/>
@@ -47,7 +47,7 @@
         <!-- Child-Template: 7 % – wie vom Kunden ausgewiesen -->
         <record id="tax_de_ust_delivery_7_goods" model="account.tax.template">
             <field name="name">MwSt. 7% Waren</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">MwSt. 7% Waren</field>
             <field name="type">percentage</field>
             <field eval="Decimal('0.07')" name="rate"/>
@@ -59,7 +59,7 @@
         <!-- Parent-Template: voller Satz -->
         <record id="tax_de_ust_delivery_free_goods" model="account.tax.template">
             <field name="name">Umsatzsteuer steuerfreie Waren</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Umsatzsteuerfreie Waren Inland</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_ust_goods"/>
@@ -67,7 +67,7 @@
         <!-- Child-Template: 0 % – wie auf der Rechnung ausgewiesen -->
         <record id="tax_de_ust_delivery_0_goods" model="account.tax.template">
             <field name="name">MwSt. 0% Waren</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">MwSt. 0% Waren</field>
             <field name="type">percentage</field>
             <field eval="Decimal('0.0')" name="rate"/>
@@ -79,7 +79,7 @@
         <!-- Reverse Charge: Inland – Bauleistungen an Unternehmer (Leistungsempfänger schuldet Steuer) -->
         <record id="tax_de_delivery_13b" model="account.tax.template">
             <field name="name">Umsatzsteuer Werklieferungen §13b Abs. 5 UStG. </field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Steuerpflichtig nach §13b UStG</field>
             <field name="legal_notice">Steuerschuldnerschaft geht nach §13b UStG auf den Leistungsempfänger über</field>
             <field name="type">percentage</field>
@@ -91,7 +91,7 @@
         <!-- Steuerfrei: Innergemeinschaftliche Lieferung von Waren (für EU-Warenexport mit gültiger USt-ID) -->
         <record id="tax_inner_eu_not_taxable" model="account.tax.template">
             <field name="name">Steuerfreie innergem. Lieferung von Waren (§4 Abs. 1b UStG)</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Innergem. Waren USt-frei</field>
             <field name="legal_notice">Steuerschuldnerschaft des Leistungsempfängers §4Nr. 1b i.V.m. §6a UStG</field>
             <field name="type">percentage</field>
@@ -103,7 +103,7 @@
         <!-- Reverse Charge: Innergemeinschaftliche Sonst. Leistungen nach §3a Abs. 2 UStG -->
         <record id="tax_de_eu_delivery_service" model="account.tax.template">
             <field name="name">Steuerfreie innergem. sonstige Leistung §3a Absatz 2 UStG </field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Innergem. Dienstl. USt-frei</field>
             <field name="legal_notice">Steuerschuldnerschaft des Leistungsempfängers (§13b UStG)</field>
             <field name="type">percentage</field>
@@ -115,7 +115,7 @@
         <!-- Nicht steuerbar: Sonst. Leistungen mit Leistungsort im Drittland -->
         <record id="tax_de_au_delivery_service" model="account.tax.template">
             <field name="name">Nicht steuerbare Umsätze (Leistungsort nicht im Inland) </field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Sonst. Leistungen in Drittländer</field>
             <field name="legal_notice">Steuerfreie sonst. Leist. mit Leistungsort im Drittland (§3a Abs.2 UStG)</field>
             <field name="type">percentage</field>
@@ -127,7 +127,7 @@
         <!-- Parent-Template: voller Satz für Sonst. Leistungen (ohne Prozent im ID) -->
         <record id="tax_de_ust_delivery_full_service" model="account.tax.template">
             <field name="name">Umsatzsteuer voller Satz sonstige Leistungen</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Sonst. Leistungen im Inland voller Satz</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_ust_service"/>
@@ -135,7 +135,7 @@
         <!-- Child-Template: 19 % – wie auf der Rechnung ausgewiesen -->
         <record id="tax_de_ust_delivery_19" model="account.tax.template">
             <field name="name">MwSt. 19% sonst. Leist.</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">MwSt. 19% sonst. Leist.</field>
             <field name="type">percentage</field>
             <field eval="Decimal('0.19')" name="rate"/>
@@ -147,7 +147,7 @@
         <!-- Parent-Template: erm.  Satz für 7 % Sonst. Leistungen -->
         <record id="tax_de_ust_delivery_erm_service" model="account.tax.template">
             <field name="name">Umsatzsteuer ermäßigter Satz sonstige Leistungen </field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Sonst. Leistungen im Inland erm. Satz</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_ust_service"/>
@@ -155,7 +155,7 @@
         <!-- Child-Template: 7 % – wie auf der Rechnung ausgewiesen -->
         <record id="tax_de_ust_delivery_7" model="account.tax.template">
             <field name="name">MwSt. 7% sonst. Leist.</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">MwSt. 7% sonst. Leist.</field>
             <field name="type">percentage</field>
             <field eval="Decimal('0.07')" name="rate"/>
@@ -167,7 +167,7 @@
         <!-- Parent-Template: steuerfreie Sonst. Leistungen -->
         <record id="tax_de_ust_delivery_free_service" model="account.tax.template">
             <field name="name">Umsatzsteuer steuerfreie sonstige Leistungen</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Sonst. Leistungen im Inland steuerfrei</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_ust_service"/>
@@ -175,7 +175,7 @@
         <!-- Child-Template: 0 % – wie auf der Rechnung ausgewiesen -->
         <record id="tax_de_ust_delivery_0" model="account.tax.template">
             <field name="name">MwSt. 0% sonst. Leist.</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">MwSt. 0% sonst. Leist.</field>
             <field name="type">percentage</field>
             <field eval="Decimal('0.0')" name="rate"/>
@@ -187,14 +187,14 @@
         <!-- §13b UStG: Vorsteuer + Umsatzsteuer für empfangene Leistungen – EU/Drittland -->
         <record id="tax_eu_s13b_abs1_19_vst_ust_new" model="account.tax.template">
             <field name="name">Innergem. sonstige Leistung  §13b Abs 1 UStG VSt voll / USt voll </field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Steuer für die gleichzeitige Verbuchung von Vor- und Umsatzsteuer</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_service"/>
         </record>
         <record id="tax_eu_s13b_abs1_19_vst_new" model="account.tax.template">
             <field name="name">voll Vorsteuer erhaltenen EU-Leistungen §13b Abs.1</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">voll VSt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('0.19')"/>
@@ -204,7 +204,7 @@
         </record>
         <record id="tax_eu_s13b_abs1_19_ust_new" model="account.tax.template">
             <field name="name">voll Umsatzsteuer  erhaltenen EU-Leistungen §13b Abs.1</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">voll USt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('-0.19')"/>
@@ -215,14 +215,14 @@
         <!-- §13b UStG: Vorsteuer + Umsatzsteuer für empfangene Leistungen – EU/Drittland -->
         <record id="tax_eu_s13b_abs1_7_vst_ust_new" model="account.tax.template">
             <field name="name">Innergem. sonstige Leistung  §13b Abs 1 UStG VSt erm. / USt erm.</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Steuer für die gleichzeitige Verbuchung von Vor- und Umsatzsteuer</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_service"/>
         </record>
         <record id="tax_eu_s13b_abs1_7_vst_new" model="account.tax.template">
             <field name="name">erm. Vorsteuer erhaltenen EU-Leistungen §13b Abs.1</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">erm. VSt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('0.07')"/>
@@ -232,7 +232,7 @@
         </record>
         <record id="tax_eu_s13b_abs1_7_ust_new" model="account.tax.template">
             <field name="name">erm. Umsatzsteuer erhaltenen EU-Leistungen §13b Abs.1</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">erm. USt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('-0.07')"/>
@@ -243,14 +243,14 @@
         <!-- §13b UStG: Vorsteuer + Umsatzsteuer für empfangene Leistungen – EU/Drittland -->
         <record id="tax_eu_s13b_abs1_0_vst_ust_new" model="account.tax.template">
             <field name="name">Innergem. sonstige Leistung  §13b Abs 1 UStG VSt frei / USt frei</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Steuer für die gleichzeitige Verbuchung von Vor- und Umsatzsteuer</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_service"/>
         </record>
         <record id="tax_eu_s13b_abs0_vst_new" model="account.tax.template">
             <field name="name">frei Vorsteuer erhaltenen EU-Leistungen §13b Abs.1</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">frei VSt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('0.0')"/>
@@ -260,7 +260,7 @@
         </record>
         <record id="tax_eu_s13b_abs1_0_ust_new" model="account.tax.template">
             <field name="name">frei Umsatzsteuer  erhaltenen EU-Leistungen §13b Abs.1</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">frei USt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('-0.0')"/>
@@ -271,14 +271,14 @@
         <!-- §13b UStG: Vorsteuer + Umsatzsteuer für empfangene Leistungen – EU/Drittland -->
         <record id="tax_dritt_s13b_abs2_19_vst_ust_new" model="account.tax.template">
             <field name="name">sonstige Leistung Drittland §13b Abs 2 UStG VSt voll / USt voll</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Steuer für die gleichzeitige Verbuchung von Vor- und Umsatzsteuer</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_service"/>
         </record>
         <record id="tax_dritt_s13b_abs2_19_vst_new" model="account.tax.template">
             <field name="name">voll Vorsteuer Drittland Leistungen §13b Abs.2</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">voll Einfuhr VSt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('0.19')"/>
@@ -288,7 +288,7 @@
         </record>
         <record id="tax_dritt_s13b_abs2_19_ust_new" model="account.tax.template">
             <field name="name">voll Umsatzsteuer Drittland Leistungen §13b Abs.2</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">voll USt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('-0.19')"/>
@@ -299,14 +299,14 @@
         <!-- §13b UStG: Vorsteuer + Umsatzsteuer für empfangene Leistungen – EU/Drittland -->
         <record id="tax_dritt_s13b_abs2_7_vst_ust_new" model="account.tax.template">
             <field name="name">sonstige Leistung Drittland §13b Abs 2 UStG VSt erm. / USt erm.</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Steuer für die gleichzeitige Verbuchung von Vor- und Umsatzsteuer</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_service"/>
         </record>
         <record id="tax_dritt_s13b_abs2_7_vst_new" model="account.tax.template">
             <field name="name">erm. Vorsteuer Drittland Leistungen §13b Abs.2</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">erm. Einfuhr VSt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('0.07')"/>
@@ -316,7 +316,7 @@
         </record>
         <record id="tax_dritt_s13b_abs2_7_ust_new" model="account.tax.template">
             <field name="name">erm. Umsatzsteuer Drittland Leistungen §13b Abs.2</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">erm. USt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('-0.07')"/>
@@ -327,14 +327,14 @@
         <!-- §13b UStG: Vorsteuer + Umsatzsteuer für empfangene Leistungen – EU/Drittland -->
         <record id="tax_dritt_s13b_abs2_0_vst_ust_new" model="account.tax.template">
             <field name="name">sonstige Leistung Drittland §13b Abs 2 UStG VSt frei / USt frei</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Steuer für die gleichzeitige Verbuchung von Vor- und Umsatzsteuer</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_service"/>
         </record>
         <record id="tax_dritt_s13b_abs2_0_vst_new" model="account.tax.template">
             <field name="name">frei Vorsteuer Drittland Leistungen §13b Abs.2</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">frei Einfuhr VSt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('0.00')"/>
@@ -344,7 +344,7 @@
         </record>
         <record id="tax_dritt_s13b_abs2_0_ust_new" model="account.tax.template">
             <field name="name">frei Umsatzsteuer Drittland Leistungen §13b Abs.2</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">frei USt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('-0.00')"/>
@@ -355,7 +355,7 @@
         <!-- Parent-Template: Vorsteuer sonstige Leistung voller Satz -->
         <record id="tax_de_vst_purchase_full_service" model="account.tax.template">
             <field name="name">Vorsteuer voll sonstige Leistung</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Sonst. Leistungen im Inland voller Satz</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_service"/>
@@ -363,7 +363,7 @@
         <!-- Child-Template: 19 % – wie auf der Rechnung ausgewiesen -->
         <record id="tax_de_vst_purchase_19_service" model="account.tax.template">
             <field name="name">Vorsteuer voll sonstige Leistung</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Sonst. Leistungen im Inland voller Satz</field>
             <field name="type">percentage</field>
             <field eval="Decimal('0.19')" name="rate"/>
@@ -375,7 +375,7 @@
         <!-- Parent-Template: Vorsteuer sonstige Leistung ermäßigter Satz -->
         <record id="tax_de_vst_purchase_ermaessigt_service" model="account.tax.template">
             <field name="name">Vorsteuer erm. sonstige Leistung</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Sonst. Leistungen im Inland ermäßigter Satz</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_service"/>
@@ -383,7 +383,7 @@
         <!-- Child-Template: 7 % – wie auf der Rechnung ausgewiesen -->
         <record id="tax_de_vst_purchase_7_service" model="account.tax.template">
             <field name="name">Vorsteuer erm. sonstige Leistung</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Sonst. Leistungen im Inland ermäßigter Satz</field>
             <field name="type">percentage</field>
             <field eval="Decimal('0.07')" name="rate"/>
@@ -395,7 +395,7 @@
         <!-- Parent-Template: Vorsteuer sonstige Leistung steuerfrei -->
         <record id="tax_de_vst_purchase_frei_service" model="account.tax.template">
             <field name="name">Vorsteuer frei sonstige Leistung</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Sonst. Leistungen im Inland steuerfrei</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_service"/>
@@ -403,7 +403,7 @@
         <!-- Child-Template: 0 % – wie auf der Rechnung ausgewiesen -->
         <record id="tax_de_vst_purchase_0_service" model="account.tax.template">
             <field name="name">Vorsteuer frei sonstige Leistung</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Sonst. Leistungen im Inland steuerfrei, z.b. Solaranlagen Sonst. Leistungen</field>
             <field name="type">percentage</field>
             <field eval="Decimal('0.0')" name="rate"/>
@@ -415,7 +415,7 @@
         <!-- Parent-Template: Vorsteuer volle Waren -->
         <record id="tax_de_vst_purchase_full_goods" model="account.tax.template">
             <field name="name">Vorsteuer voll Waren</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Waren im Inland voller Satz</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_goods"/>
@@ -423,7 +423,7 @@
         <!-- Child-Template: 19 % – wie auf der Rechnung ausgewiesen -->
         <record id="tax_de_vst_purchase_19_goods" model="account.tax.template">
             <field name="name">Vorsteuer voll Waren</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Waren im Inland voller Satz</field>
             <field name="type">percentage</field>
             <field eval="Decimal('0.19')" name="rate"/>
@@ -435,7 +435,7 @@
         <!-- Parent-Template: Vorsteuer erm. Waren -->
         <record id="tax_de_vst_purchase_ermaessigt_goods" model="account.tax.template">
             <field name="name">Vorsteuer erm. Waren</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Waren im Inland ermäßigter Satz</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_goods"/>
@@ -443,7 +443,7 @@
         <!-- Child-Template: 7 % – wie auf der Rechnung ausgewiesen -->
         <record id="tax_de_vst_purchase_7_goods" model="account.tax.template">
             <field name="name">Vorsteuer erm. Waren</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Waren im Inland ermäßigter Satz</field>
             <field name="type">percentage</field>
             <field eval="Decimal('0.07')" name="rate"/>
@@ -455,7 +455,7 @@
         <!-- Parent-Template: Vorsteuer frei Waren -->
         <record id="tax_de_vst_purchase_free_goods" model="account.tax.template">
             <field name="name">Vorsteuer frei Waren</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Waren im Inland steuerfrei</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_goods"/>
@@ -463,7 +463,7 @@
         <!-- Child-Template: 0 % – wie auf der Rechnung ausgewiesen -->
         <record id="tax_de_vst_purchase_0_goods" model="account.tax.template">
             <field name="name">Vorsteuer frei Waren</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Waren im Inland steuerfrei, z.B. Solaranlagen Sonst. Leistungen</field>
             <field name="type">percentage</field>
             <field eval="Decimal('0.0')" name="rate"/>
@@ -475,7 +475,7 @@
         <!-- §13b UStG: Vorsteuer + Umsatzsteuer für empfangene Leistungen – EU/Drittland -->
         <record id="tax_eu_inner_erwerb_19_vst_ust_new" model="account.tax.template">
             <field name="name">Innergemeinschaftlicher Erwerb VSt voll / USt voll </field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Steuer für die gleichzeitige Verbuchung von Vor- und Umsatzsteuer</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_goods"/>
@@ -483,7 +483,7 @@
         <!-- Innergemeinschaftlicher Erwerb: EU-Warenbezug mit Erwerbsteuer & Vorsteuer -->
         <record id="tax_eu_inner_erwerb_19_vst_new" model="account.tax.template">
             <field name="name">voll Vorsteuer Innergemeinschaftlicher Erwerb </field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">voll VSt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('0.19')"/>
@@ -494,7 +494,7 @@
         <!-- Innergemeinschaftlicher Erwerb: EU-Warenbezug mit Erwerbsteuer & Vorsteuer -->
         <record id="tax_eu_inner_erwerb_19_ust_new" model="account.tax.template">
             <field name="name">voll Umsatzsteuer Innergemeinschaftlicher Erwerb </field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">voll USt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('-0.19')"/>
@@ -505,7 +505,7 @@
         <!-- §13b UStG: Vorsteuer + Umsatzsteuer für empfangene Leistungen – EU/Drittland -->
         <record id="tax_eu_inner_erwerb_7_vst_ust_new" model="account.tax.template">
             <field name="name">Innergemeinschaftlicher Erwerb VSt erm. / USt erm.</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Steuer Innergemeinschaftlicher Erwerb Vor- und Umsatzsteuer</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_goods"/>
@@ -513,7 +513,7 @@
         <!-- Innergemeinschaftlicher Erwerb: EU-Warenbezug mit Erwerbsteuer & Vorsteuer -->
         <record id="tax_eu_inner_erwerb_7_vst_new" model="account.tax.template">
             <field name="name">erm. Vorsteuer Innergemeinschaftlicher Erwerb</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">erm. VSt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('0.07')"/>
@@ -524,7 +524,7 @@
         <!-- Innergemeinschaftlicher Erwerb: EU-Warenbezug mit Erwerbsteuer & Vorsteuer -->
         <record id="tax_eu_inner_erwerb_7_ust_new" model="account.tax.template">
             <field name="name">erm. Umsatzsteuer Innergemeinschaftlicher Erwerb</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">erm. USt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('-0.07')"/>
@@ -535,7 +535,7 @@
         <!-- §13b UStG: Vorsteuer + Umsatzsteuer für empfangene Leistungen – EU/Drittland -->
         <record id="tax_eu_inner_erwerb_0_vst_ust_new" model="account.tax.template">
             <field name="name">Innergemeinschaftlicher Erwerb VSt frei / USt frei</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Steuer für die gleichzeitige Verbuchung von Vor- und Umsatzsteuer</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_goods"/>
@@ -543,7 +543,7 @@
         <!-- Innergemeinschaftlicher Erwerb: EU-Warenbezug mit Erwerbsteuer & Vorsteuer -->
         <record id="tax_eu_inner_erwerb_0_vst_new" model="account.tax.template">
             <field name="name">frei Vorsteuer Innergemeinschaftlicher Erwerb</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">frei VSt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('0.0')"/>
@@ -554,7 +554,7 @@
         <!-- Innergemeinschaftlicher Erwerb: EU-Warenbezug mit Erwerbsteuer & Vorsteuer -->
         <record id="tax_eu_inner_erwerb_0_ust_new" model="account.tax.template">
             <field name="name">frei Umsatzsteuer Innergemeinschaftlicher Erwerb</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">frei USt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('-0.0')"/>
@@ -565,7 +565,7 @@
         <!-- Vorsteuer: Bezug von Waren oder Sonst. Leistungen im Inland mit ausgewiesenem Steuerbetrag -->
         <record id="helper_tax_dritt_vst_purchase_19_goods" model="account.tax.template">
             <field name="name">Steuerfiktion, um Kontenregel (nach 5551) auszulösen, Betrag frei; Bezug voll</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Einfuhrumsatzsteuer bei Einfuhr der Ware, wenn VSt vom Zolldienstleister übernommen wird</field>
             <field name="legal_notice"/>
             <field name="type">percentage</field>
@@ -577,7 +577,7 @@
         <!-- Vorsteuer: Bezug von Waren oder Sonst. Leistungen im Inland mit ausgewiesenem Steuerbetrag -->
         <record id="helper_tax_dritt_vst_purchase_7_goods" model="account.tax.template">
             <field name="name">Steuerfiktion, um Kontenregel (nach 5551) auszulösen, Betrag frei; Bezug erm. </field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Einfuhrumsatzsteuer bei Einfuhr der Ware, wenn VSt vom Zolldienstleister übernommen wird/field</field>
             <field name="legal_notice"/>
             <field name="type">percentage</field>
@@ -589,7 +589,7 @@
         <!-- Vorsteuer: Bezug von Waren oder Sonst. Leistungen im Inland mit ausgewiesenem Steuerbetrag -->
         <record id="helper_tax_dritt_vst_purchase_0_goods" model="account.tax.template">
             <field name="name">Steuerfiktion, um Kontenregel (nach 5551) auszulösen, Betrag frei; Bezug frei </field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Einfuhrumsatzsteuer bei Einfuhr der Ware, wenn VSt vom Zolldienstleister übernommen wird</field>
             <field name="legal_notice"/>
             <field name="type">percentage</field>
@@ -601,7 +601,7 @@
         <!-- Parent-Template: Einfuhrumsatzsteuer voller Satz -->
         <record id="tax_dritt_vst_purchase_full_goods_customs" model="account.tax.template">
             <field name="name">Einfuhrumsatzsteuer voller Satz</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Einfuhrumsatzsteuer bei Einfuhr der Ware, wenn VSt vom Zolldienstleister übernommen wird</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_customs_import"/>
@@ -609,7 +609,7 @@
         <!-- Child-Template: 19 % – wie auf der Rechnung ausgewiesen -->
         <record id="tax_dritt_vst_purchase_19_goods_customs" model="account.tax.template">
             <field name="name">Einfuhrumsatzsteuer voll</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Einfuhrumsatzsteuer bei Einfuhr der Ware, wenn VSt vom Zolldienstleister übernommen wird</field>
             <field name="type">percentage</field>
             <field eval="Decimal('0.19')" name="rate"/>
@@ -621,7 +621,7 @@
         <!-- Parent-Template: Einfuhrumsatzsteuer ermäßigter Satz -->
         <record id="tax_dritt_vst_purchase_ermaessigt_goods_customs" model="account.tax.template">
             <field name="name">Einfuhrumsatzsteuer ermäßigter Satz</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Einfuhrumsatzsteuer bei Einfuhr der Ware, wenn VSt vom Zolldienstleister übernommen wird</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_customs_import"/>
@@ -629,7 +629,7 @@
         <!-- Child-Template: 7 % – wie auf der Rechnung ausgewiesen -->
         <record id="tax_dritt_vst_purchase_7_goods_customs" model="account.tax.template">
             <field name="name">Einfuhrumsatzsteuer erm.</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Einfuhrumsatzsteuer bei Einfuhr der Ware, wenn VSt vom Zolldienstleister übernommen wird</field>
             <field name="type">percentage</field>
             <field eval="Decimal('0.07')" name="rate"/>
@@ -641,7 +641,7 @@
         <!-- Vorsteuer: Bezug von Waren oder Sonst. Leistungen im Inland mit ausgewiesenem Steuerbetrag -->
         <record id="tax_de_purchase_19_13b" model="account.tax.template">
             <field name="name">Vorsteuer Standard Andere Leistung §13b Abs. 2 1,2,4 - 12</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Voller Satz Steuer für die gleichzeitige Verbuchung von Vor- und Umsatzsteuer bei innerdeutschem Erwerb von 13 b Leistungen</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_service"/>
@@ -649,7 +649,7 @@
         <!-- Vorsteuer: Bezug von Waren oder Sonst. Leistungen im Inland mit ausgewiesenem Steuerbetrag -->
         <record id="tax_de_purchase_19_13b_VST" model="account.tax.template">
             <field name="name">voll Vorsteuer erhaltenen DE-Leistungen §13b Abs.1</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">voll VSt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('0.19')"/>
@@ -660,7 +660,7 @@
         <!-- Vorsteuer: Bezug von Waren oder Sonst. Leistungen im Inland mit ausgewiesenem Steuerbetrag -->
         <record id="tax_de_purchase_19_13b_UST" model="account.tax.template">
             <field name="name">voll Umsatzsteuer  erhaltenen DE -Leistungen §13b Abs.1</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">voll USt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('-0.19')"/>
@@ -671,7 +671,7 @@
         <!-- Vorsteuer: Bezug von Waren oder Sonst. Leistungen im Inland mit ausgewiesenem Steuerbetrag -->
         <record id="tax_de_purchase_7_13b" model="account.tax.template">
             <field name="name">Vorsteuer Standard Andere Leistung §13b Abs. 2 1,2,4 - 12</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Ermäßigter Satz Steuer für die gleichzeitige Verbuchung von Vor- und Umsatzsteuer bei innerdeutschem Erwerb von 13 b Leistungen</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_service"/>
@@ -679,7 +679,7 @@
         <!-- Vorsteuer: Bezug von Waren oder Sonst. Leistungen im Inland mit ausgewiesenem Steuerbetrag -->
         <record id="tax_de_purchase_7_13b_VST" model="account.tax.template">
             <field name="name">erm. Vorsteuer erhaltenen DE-Leistungen §13b Abs.1</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">erm. VSt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('0.07')"/>
@@ -690,7 +690,7 @@
         <!-- Vorsteuer: Bezug von Waren oder Sonst. Leistungen im Inland mit ausgewiesenem Steuerbetrag -->
         <record id="tax_de_purchase_7_13b_UST" model="account.tax.template">
             <field name="name">erm. Umsatzsteuer  erhaltenen DE -Leistungen §13b Abs.1</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">erm. USt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('-0.07')"/>
@@ -701,7 +701,7 @@
         <!-- Vorsteuer: Bezug von Waren oder Sonst. Leistungen im Inland mit ausgewiesenem Steuerbetrag -->
         <record id="tax_de_purchase_0_13b" model="account.tax.template">
             <field name="name">Vorsteuer Standard Andere Leistung §13b Abs. 2 1,2,4 - 12</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">Steuerfreier Satz Steuer für die gleichzeitige Verbuchung von Vor- und Umsatzsteuer bei innerdeutschem Erwerb von 13 b Leistungen</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_vst_service"/>
@@ -709,7 +709,7 @@
         <!-- Vorsteuer: Bezug von Waren oder Sonst. Leistungen im Inland mit ausgewiesenem Steuerbetrag -->
         <record id="tax_de_purchase_0_13b_VST" model="account.tax.template">
             <field name="name">frei Vorsteuer erhaltenen DE-Leistungen §13b Abs.1</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">frei VSt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('0.00')"/>
@@ -720,7 +720,7 @@
         <!-- Vorsteuer: Bezug von Waren oder Sonst. Leistungen im Inland mit ausgewiesenem Steuerbetrag -->
         <record id="tax_de_purchase_0_13b_UST" model="account.tax.template">
             <field name="name">frei Umsatzsteuer  erhaltenen DE -Leistungen §13b Abs.1</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="description">frei USt</field>
             <field name="type">percentage</field>
             <field name="rate" eval="Decimal('-0.00')"/>

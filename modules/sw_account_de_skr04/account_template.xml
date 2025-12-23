@@ -4,14 +4,14 @@
  this repository contains the full copyright notices and license terms.-->
 <tryton>
     <data>
-        <record id="root_de" model="account.account.template">
+        <record id="root_de_skr04" model="account.account.template">
             <field name="name">Kontenplan SKR04 (Germany)</field>
             <field name="type" ref="type_balance"/>
             <field name="closed" eval="True"/>
         </record>
         <record id="view_income_1380" model="account.account.template">
             <field name="name">Vorläufiges Ergebnis</field>
-            <field name="parent" ref="root_de"/>
+            <field name="parent" ref="root_de_skr04"/>
         </record>
         <record id="view_income_1345" model="account.account.template">
             <field name="name">Ergebnis vor Steuern</field>
@@ -4117,13 +4117,13 @@
             <field name="code">7610</field>
             <field name="type" ref="type_4600"/>
         </record>
-        <record id="balance_root_de" model="account.account.template">
+        <record id="balance_root_de_skr04" model="account.account.template">
             <field name="name">Bilanzkonten</field>
-            <field name="parent" ref="root_de"/>
+            <field name="parent" ref="root_de_skr04"/>
         </record>
         <record id="view_balance_960" model="account.account.template">
             <field name="name">Aktiva</field>
-            <field name="parent" ref="balance_root_de"/>
+            <field name="parent" ref="balance_root_de_skr04"/>
         </record>
         <record id="view_balance_1020" model="account.account.template">
             <field name="name">Ausstehende Einlagen</field>
@@ -6019,7 +6019,7 @@
         </record>
         <record id="view_balance_1960" model="account.account.template">
             <field name="name">Passiva</field>
-            <field name="parent" ref="balance_root_de"/>
+            <field name="parent" ref="balance_root_de_skr04"/>
         </record>
         <record id="view_balance_2020" model="account.account.template">
             <field name="name">Kapital</field>
@@ -7519,7 +7519,7 @@
         </record>
         <record id="view_balance_2890" model="account.account.template">
             <field name="name">Bilanzneutrale Konten</field>
-            <field name="parent" ref="balance_root_de"/>
+            <field name="parent" ref="balance_root_de_skr04"/>
         </record>
         <record id="view_balance_9200" model="account.account.template">
             <field name="name">Statistische Konten für § 4 Abs. 3 EStG</field>

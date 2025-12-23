@@ -7,7 +7,7 @@
         <!--Rules Innergemeinschaftlicher Erwerb-->
         <record id="tax_rule_purchase_EU_USTID" model="account.tax.rule.template">
             <field name="name">Lieferant ist Unternehmen in der EU (mit USt-ID)</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="kind">purchase</field>
         </record>
         <record id="tax_rule_line_01" model="account.tax.rule.line.template">
@@ -49,7 +49,7 @@
         <!-- Innergemeinschaftliche Lieferung-->
         <record id="tax_rule_sale_EU_USTID" model="account.tax.rule.template">
             <field name="name">Kunde ist Unternehmen in der EU (mit USt-ID)</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="kind">sale</field>
         </record>
         <record id="tax_rule_line_07" model="account.tax.rule.line.template">
@@ -64,7 +64,7 @@
         </record>
         <record id="tax_rule_purchase_dritt_USTID_customsservice" model="account.tax.rule.template">
             <field name="name">Lieferant in Drittland, Zollabwicklung über Dienstleister</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="kind">purchase</field>
         </record>
         <record id="tax_rule_line_15" model="account.tax.rule.line.template">
@@ -106,7 +106,7 @@
         <!-- Kunde Drittland mit UStID-->
         <record id="tax_rule_sale_dritt_USTID" model="account.tax.rule.template">
             <field name="name">Kunde im Drittland (Privatperson oder Unternehmen)</field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="kind">sale</field>
         </record>
         <record id="tax_rule_line_21" model="account.tax.rule.line.template">
@@ -122,7 +122,7 @@
         <!-- Lieferant ist Subunterneher -->
         <record id="tax_rule_purchase_DE_13b" model="account.tax.rule.template">
             <field name="name">Lieferant ist Subunternehmer nach §13b UStG </field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="kind">purchase</field>
         </record>
         <record id="tax_rule_line_23" model="account.tax.rule.line.template">
@@ -146,7 +146,7 @@
         <!-- Kunde ist Generalunterneher, der selber nach 13b meine Steuer abführen muss -->
         <record id="tax_rule_sale_DE_13b" model="account.tax.rule.template">
             <field name="name">Kunde schuldet Umsatzsteuer nach §13b UStG (z.B. Generalunternehmer) </field>
-            <field name="account" ref="account_de_skr04_I.root_de"/>
+            <field name="account" ref="root_de_skr04"/>
             <field name="kind">sale</field>
         </record>
         <record id="tax_rule_line_25" model="account.tax.rule.line.template">
